@@ -1,4 +1,5 @@
-import { calculate, coins } from '../store/calculate'
+import calculate from '../store/calculate'
+import coins from '../store/coins'
 import each from 'jest-each';
 
 test("coins return correct set of coins", () => {
@@ -55,7 +56,8 @@ each([
     [-10, /*bank*/coins(0, 0, 2, 1), /*cache*/coins(0, 0, 0, 0), /*change*/coins(0, 0, 0, 1)],
     [-10, /*bank*/coins(0, 0, 2, 0), /*cache*/coins(0, 0, 0, 1), /*change*/coins(0, 0, 0, 1)],
     [-20, /*bank*/coins(0, 0, 2, 1), /*cache*/coins(0, 0, 0, 0), /*change*/coins(0, 0, 2, 1)],
-    [-20, /*bank*/coins(0, 0, 1, 0), /*cache*/coins(0, 0, 1, 1), /*change*/coins(0, 0, 2, 1)]
+    [-20, /*bank*/coins(0, 0, 1, 0), /*cache*/coins(0, 0, 1, 1), /*change*/coins(0, 0, 2, 1)],
+    [10, /*bank*/coins(10, 0, 0, 0), /*cache*/coins(0, 0, 0, 1), /*change*/coins(10, 0, 0, 0)]
 ]).test("calculate returns change with most valuable coins from bank and cache", 
     (money, bank, cache, change) => {
         // act
