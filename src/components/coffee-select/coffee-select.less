@@ -1,0 +1,70 @@
+@import '../theme.less';
+
+.coffee-position {
+    width: 96px;
+    height: 184px;
+    background-color: @background-color;
+    border: @foreground-color 1px solid;
+    border-radius: 16px;
+    margin: 0 2px 0 2px;
+
+    &:hover{
+        background-color: @foreground-color;
+        border: @background-color 1px solid;
+
+        .coffee-text{
+            color: @background-color;
+            font-weight: bold;
+        }
+    }
+
+    &.selected {
+        background-color: @background-selected-color;
+        border: @foreground-selected-color 1px solid;
+
+        .coffee-text{
+            color: @foreground-selected-color;
+            font-weight: bold;
+        }
+    }        
+    
+    &.disabled {
+        background-color: @background-disabled-color;
+        pointer-events: none;
+    }        
+}  
+
+.coffees {
+    margin: 0 4px 0 4px;
+}
+
+
+
+.coffee-img {
+    height: 75px;
+    margin-left: auto;
+    margin-right: auto;
+    vertical-align: bottom;
+    display: table-cell;
+
+    img {
+        width: 64px;
+        height: 64px;
+        vertical-align: bottom
+    }
+}
+
+.coffee-text {    
+    text-align: center;
+    color: @foreground-color;
+}
+
+.coffee-name {
+    margin-top: 5px;
+    font-size: 12px;
+}
+
+.coffee-cost {
+    margin-top: 30px;
+    font-size: 30px;
+}

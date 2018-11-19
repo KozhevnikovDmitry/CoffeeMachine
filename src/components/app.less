@@ -1,0 +1,63 @@
+@import './theme.less';
+
+#app {
+  font-family: @app-font;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  margin-top: 60px;
+  width: 523px;
+  height: 527px;
+  background-color: @app-background-color;
+  border-color: @app-border-color;
+  border-radius: 16px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+h1 {
+  font-weight: normal;
+  font-size: 36px;
+  color: @foreground-color;
+  font-weight: bold;
+  padding-top: 15px; 
+}
+  
+a {
+  color: @link-color;
+}
+
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 70px;
+  line-height: 20px;
+  background-color: @foreground-color;
+}
+
+.container {
+  width: auto;
+  max-width: 680px;
+  padding: 5px 15px;
+}
+
+.message {
+  color: @foreground-color;
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.uppercase { 
+  text-transform: uppercase;
+}
